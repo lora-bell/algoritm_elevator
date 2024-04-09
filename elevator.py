@@ -10,13 +10,13 @@ def time_elevator():
         quantity = int(input())
         quantity_people.append(quantity)
 
-    remains = 0  # 1
-    time = 0  # 0
+    remains = 0
+    time = 0
 
     for b in range(floors, 0, -1):
         if quantity_people[b] != 0:
-            people = quantity_people[b] - remains  # 1
-            num_trips = math.ceil(people / elevator_capacity)  # 0
+            people = quantity_people[b] - remains
+            num_trips = math.ceil(people / elevator_capacity)
             time += num_trips * b * 2
 
             if people % elevator_capacity == 0:
